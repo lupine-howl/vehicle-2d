@@ -91,7 +91,7 @@ height = 44.0
 script = ExtResource( 5 )
 
 [node name="space-1631601886144-2135" type="Sprite" parent="."]
-position = Vector2( 2525.9, 154.973 )
+position = Vector2( 1889.74, 273.063 )
 scale = Vector2( 4.12083, 3.16667 )
 texture = ExtResource( 4 )
 

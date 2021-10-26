@@ -1,0 +1,164 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://hill-tiles.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Vehicle.gd" type="Script" id=3]
+[ext_resource path="res://space-1631601886144-2135.jpg" type="Texture" id=4]
+[ext_resource path="res://World.gd" type="Script" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 78, 104, 0, 104, 78, 0, 156 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 104, 78, 104, 156, 0, 78 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 26, 156, 26, 156, 78, 0, 78 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "hill-tiles.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 146, 114, 104, 156 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "hill-tiles.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 432, 114, 104, 156 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "hill-tiles.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 146, 10, 156, 78 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 32.0
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=6]
+height = 44.0
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="space-1631601886144-2135" type="Sprite" parent="."]
+position = Vector2( 2525.9, 154.973 )
+scale = Vector2( 4.12083, 3.16667 )
+texture = ExtResource( 4 )
+
+[node name="help me" type="TileMap" parent="."]
+modulate = Color( 0.839216, 0.145098, 0.145098, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -176.003, 334.978 )
+rotation = 0.00304776
+scale = Vector2( 0.87908, 1.0378 )
+tile_set = SubResource( 4 )
+cell_size = Vector2( 26, 26 )
+format = 1
+tile_data = PoolIntArray( -393261, 1, 0, -262185, 1, 0, -65573, 1, 0, 131039, 1, 0, 262114, 1, 0, 393189, 1, 0, 589801, 1, 0, 720876, 1, 0, 917488, 1, 0, 917537, 0, 0, 1114100, 1, 0, 1048605, 0, 0, 1048701, 1, 0, 1114131, 0, 0, 1179673, 0, 0, 1179744, 0, 0, 1179748, 1, 0, 1245199, 0, 0, 1245313, 1, 0, 1441789, 2, 0, 1376259, 2, 0, 1376265, 2, 0, 1376288, 1, 0, 1376348, 0, 0, 1376360, 1, 0, 1441795, 2, 0, 1441925, 1, 0, 1507412, 2, 0, 1507417, 2, 0, 1507418, 2, 0, 1572901, 2, 0, 1572907, 2, 0, 1572913, 2, 0, 1572919, 2, 0, 1572925, 2, 0, 1572931, 2, 0, 1638537, 1, 0, 1704007, 0, 0, 1704019, 2, 0, 1835080, 0, 0, 1835089, 1, 0, 1835149, 2, 0, 1900655, 2, 0, 1966156, 2, 0, 2031622, 2, 0, 2031627, 2, 0, 2162684, -1073741824, 0, 2097163, 2, 0, 2097169, 2, 0, 2097173, 2, 0, 2097174, 2, 0, 2097175, 2, 0, 2097176, 2, 0, 2228372, 2, 0, 2424831, -1073741824, 0, 2490405, 2, 0, 2490494, 2, 0, 2555946, 2, 0, 2556047, 2, 0, 2621442, -1073741824, 0, 2621488, 1, 0, 2621523, 0, 0, 2621574, 2, 0, 2686988, -1073741822, 0, 2686992, -1073741822, 0, 2687007, -1073741822, 0, 2687063, 1, 0, 2752520, -1073741823, 0, 2752529, -1073741822, 0, 2752531, -1073741822, 0, 2752533, -1073741822, 0, 2752535, -1073741822, 0, 2752537, -1073741822, 0, 2752564, 1, 0, 2818053, -1073741824, 0, 2818127, 0, 0, 2818139, 2, 0, 2883640, 1, 0, 2883681, 2, 0, 2949223, 2, 0, 3014716, 1, 0, 3145792, 2, 0, 3145796, 2, 0, 3145800, 2, 0 )
+
+[node name="Vehicle" type="KinematicBody2D" parent="."]
+position = Vector2( -720, -224 )
+script = ExtResource( 3 )
+controls = {
+"jump": "ui_accept",
+"left": "ui_left",
+"right": "ui_right"
+}
+
+[node name="icon" type="Sprite" parent="Vehicle"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicle"]
+shape = SubResource( 5 )
+
+[node name="RayBack" type="RayCast2D" parent="Vehicle"]
+position = Vector2( -32, 32 )
+
+[node name="RayFront" type="RayCast2D" parent="Vehicle"]
+position = Vector2( 32, 32 )
+
+[node name="Camera2D" type="Camera2D" parent="Vehicle"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+
+[node name="Vehicle2" type="KinematicBody2D" parent="."]
+position = Vector2( -888, -320 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+controls = {
+"jump": "ui_accept2",
+"left": "ui_left2",
+"right": "ui_right2"
+}
+
+[node name="icon" type="Sprite" parent="Vehicle2"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vehicle2"]
+shape = SubResource( 6 )
+
+[node name="RayBack" type="RayCast2D" parent="Vehicle2"]
+position = Vector2( -32, 32 )
+
+[node name="RayFront" type="RayCast2D" parent="Vehicle2"]
+position = Vector2( 32, 32 )
